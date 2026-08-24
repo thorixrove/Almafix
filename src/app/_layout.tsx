@@ -23,7 +23,7 @@ import { useColorScheme } from "nativewind";
 import { useEffect, useState } from "react";
 import { Platform, View } from "react-native";
 import { KeyboardProvider } from "react-native-keyboard-controller";
-import "../global.css"
+import "../../global.css"
 
 
 SplashScreen.preventAutoHideAsync()

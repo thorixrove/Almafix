@@ -8,7 +8,10 @@
     "scheme": "almafix",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "icon": "./assets/expo.icon"
+      "icon": "./assets/expo.icon",
+      "config": {
+        "usesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -29,9 +32,10 @@
       [
         "expo-splash-screen",
         {
-          "backgroundColor": "#208AEF",
-          "image": "./assets/images/splash-icon.png",
-          "imageWidth": 76
+          "backgroundColor": "#2563EB",
+          "image": "./assets/images/splash-logo-white.png",
+          "imageWidth": 280,
+          "resizeMode": "contain"
         }
       ],
       "expo-secure-store",
