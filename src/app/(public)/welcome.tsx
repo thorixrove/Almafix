@@ -29,14 +29,14 @@ const Welcome = () => {
         showsVerticalScrollIndicator={false}
       >
         <View className="items-center">
-          <View className="h-20 w-36 overflow-hidden">
+          <View className="h-24 w-44 overflow-hidden">
             <Image className="size-full" resizeMode="cover" source={logo} />
           </View>
           <Text className="-mt-2 font-inter-bold text-[30px] tracking-[-0.8px] text-white">
-            MyWorkout
+            AlmaFix
           </Text>
           <Text className="mt-1 font-inter text-[13px] text-white/70">
-            Track. Train. Transform.
+            All. Track. Train. Fix.
           </Text>
         </View>
 
