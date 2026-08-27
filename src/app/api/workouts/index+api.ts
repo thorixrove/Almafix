@@ -1,7 +1,6 @@
 import { db, exercises, workoutExercises, workouts } from "@/db";
 import { auth } from "@/lib/auth";
 import { uploadImage } from "@/lib/imagekit";
-import { error } from "better-auth/api";
 import { and, count, desc, eq, sql } from "drizzle-orm";
 import { z } from "zod";
 
