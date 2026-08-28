@@ -1,8 +1,9 @@
 import { db, exercises } from "@/db";
 import { auth } from "@/lib/auth";
+import { groq } from "@ai-sdk/groq";
 import { generateText, Output } from "ai";
 import { eq } from "drizzle-orm";
-import { z } from "zod";;
+import { z } from "zod";
 
 const idSchema = z.uuid()
 
@@ -43,7 +44,7 @@ export async function GET(request: Request, {id}: Record<string, string>){
 
   try {
     const { output } = await generateText({
-      model: "google/gemini-2.5-flash",
+      model: groq("openai/gpt-oss-120b"),
       output: Output.object({
         schema: instructionOutputSchema,
       }),
