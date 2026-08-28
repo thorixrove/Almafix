@@ -268,7 +268,7 @@ const CreateWorkouts = () => {
                                                 {label}
                                             </Text>
 
-                                            <View>
+                                           <View className="flex-row items-center justify-center gap-3">
                                                 <Pressable
                                                     className="h-8 w-8 items-center justify-center rounded-lg bg-muted"
                                                     onPress={() =>
@@ -306,11 +306,11 @@ const CreateWorkouts = () => {
                     </View>
                 </View>
             </KeyboardAwareScrollView>
-            <KeyboardToolbar/>
+            <KeyboardToolbar />
 
             <LoadingModal
-            message="Saving  workout.."
-            visible={createMutation.isPending}
+                message="Saving  workout.."
+                visible={createMutation.isPending}
             />
         </SafeAreaScreen>
     )

@@ -11,7 +11,7 @@ export async function GET(request: Request) {
     if (!session)
         return Response.json({ message: "Unauthorized"}, {status: 401})
 
-    const search = new URL(request.url).searchParams.get("serach")
+    const search = new URL(request.url).searchParams.get("search")
 
     const data = await db
     .select({
