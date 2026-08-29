@@ -5,6 +5,7 @@ import * as SecureStore from "expo-secure-store"
 
 
 export const API_URL = process.env.EXPO_PUBLIC_API_URL!
+console.log("API_URL:", API_URL)
 export const authClient = createAuthClient({
     baseURL: API_URL,
     plugins: [
