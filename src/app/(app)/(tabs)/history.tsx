@@ -7,7 +7,7 @@ import { formatDuration, formatSessionDate } from "@/lib/format";
 import { useAppThemeColor } from "@/theme/app-theme";
 import { Feather } from "@expo/vector-icons";
 import { useQuery } from "@tanstack/react-query";
-import { isSameDay, startOfDay } from "date-fns";
+import { isSameDay} from "date-fns";
 import { useRouter } from "expo-router";
 import { useState } from "react";
 import { FlatList, Image, Pressable, Text, View } from "react-native";

@@ -16,7 +16,7 @@ const SingleHistory = () => {
     const { id } = useLocalSearchParams<{ id: string }>()
     const mutedForeground = useAppThemeColor("mutedForeground")
 
-    const { data, isError, isPending, refetch } = useQuery({
+    const { data,  isPending, refetch } = useQuery({
         queryKey: ["history", id],
         queryFn: () => getHistoryDetailQueryFn(id),
         enabled: Boolean(id),
@@ -43,7 +43,7 @@ const SingleHistory = () => {
                     >
                         <Feather color={mutedForeground} name="arrow-left" size={23} />
                     </Pressable>
-                    <Feather color={mutedForeground} name="more-horizontal" size={23} />
+                    {/* <Feather color={mutedForeground} name="more-horizontal" size={23} /> */}
                 </View>
 
                 <Text className="font-inter-bold text-[24px] text-foreground">
@@ -94,7 +94,8 @@ const SingleHistory = () => {
                                     <Text className="font-inter-semibold text-[13px] text-foreground">
                                         {exercise.name}
                                     </Text>
-                                    <View>
+                                    
+                                    <View className="mt-1 flex-row flex-wrap gap-2">
                                         {exercise.sets.map((set, i) => (
                                             <View
                                                 key={i}
@@ -156,7 +157,7 @@ function HistoryDetailSkeleton() {
                     <Skeleton className="h-20 flex-1 rounded-xl" />
                 </View>
                 <Skeleton className="mt-6 h-5 w-24 rounded-md" />
-                <View>
+                <View className="mt-3 gap-2">
                     {Array.from({ length: 4 }).map((_, index) => (
                         <Skeleton className="h-20 w-full rounded-xl" key={index} />
                     ))}
