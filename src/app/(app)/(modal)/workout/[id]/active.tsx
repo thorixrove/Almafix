@@ -37,6 +37,7 @@ const ActiveSessionPage = () => {
   const router = useRouter()
   const { id } = useLocalSearchParams<{ id: string }>()
 
+
   const [completed, setCompleted] = useState<string[]>([])
   const [isSaving, setIsSaving] = useState<boolean>(false)
   const timer = useWorkoutTimer()
@@ -97,7 +98,7 @@ const ActiveSessionPage = () => {
         ),
       )
       return true
-    } catch (error){
+    } catch (error) {
       Alert.alert("Could not save", "Check your connection")
       return false
     } finally {
@@ -265,6 +266,7 @@ function ActiveSession({
   const muted = useAppThemeColor("mutedForeground");
   const primary = useAppThemeColor("primary");
   const [expanded, setExpanded] = useState(workout.exercises[0]?.name ?? "")
+  const foreground = useAppThemeColor("foreground")
 
   const completedExercises = workout.exercises.filter((exercise) =>
     Array.from({ length: exercise.sets ?? 0 }, (_, index) => index + 1).every(
@@ -373,7 +375,7 @@ function ActiveSession({
                         <View
                           className={cn(
                             "h-14 flex-row items-center border-t border-border px-4",
-                            isDone && "bg-accent",
+                            isDone && "bg-primary/10",
                           )}
                           key={key}
                         >
@@ -412,7 +414,7 @@ function ActiveSession({
                             onPress={() => toggleSet(exercise, set)}
                           >
                             <Feather
-                              color={isDone ? primary : muted}
+                              color={isDone ? foreground : muted}
                               name={isDone ? "check-circle" : "circle"}
                               size={22}
                             />

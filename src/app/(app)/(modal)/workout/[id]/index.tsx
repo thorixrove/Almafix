@@ -6,7 +6,7 @@ import { getWorkoutQueryFn } from "@/lib/api";
 import { useAppThemeColor } from "@/theme/app-theme";
 import { Feather } from "@expo/vector-icons";
 import { useQuery } from "@tanstack/react-query";
-import { Label, useLocalSearchParams, useRouter } from "expo-router";
+import {  useLocalSearchParams, useRouter } from "expo-router";
 import { Image, Pressable, ScrollView, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -70,9 +70,9 @@ const Index = () => {
             >
               <Feather color="white" name="arrow-left" size={23} />
             </Pressable>
-            <View className="h-11 w-11 items-center justify-center rounded-full bg-black/40">
+            {/* <View className="h-11 w-11 items-center justify-center rounded-full bg-black/40">
               <Feather color="white" name="more-horizontal" size={23} />
-            </View>
+            </View> */}
           </View>
         </SafeAreaView>
 

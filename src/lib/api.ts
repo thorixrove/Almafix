@@ -207,7 +207,7 @@ export async function createWorkoutSessionMutationFn(data: SaveSessionInput) {
 
 export async function getHistoryQueryFn(limit?: number) {
     const query = limit === undefined ? "" : `?limit=${limit}`
-    const { data, error } = await authClient.$fetch<HistorySessionItem>(
+    const { data, error } = await authClient.$fetch<HistorySessionItem[]>(
         `${API_URL}/api/workout-sessions${query}`,
         {
             method: "GET",

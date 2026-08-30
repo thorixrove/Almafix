@@ -6,7 +6,6 @@ import {
     workoutSessionSets,
 } from "@/db";
 import { auth } from "@/lib/auth";
-import { error } from "better-auth/api";
 import { and, count, countDistinct, desc, eq } from "drizzle-orm";
 import { z } from "zod";
 
