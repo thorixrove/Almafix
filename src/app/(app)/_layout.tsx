@@ -1,9 +1,9 @@
-// import { StreakProvider } from "@/contexts/streak-context";
+import { StreakProvider } from "@/contexts/streak-context";
 import { Stack } from "expo-router";
 
 export default function Applayout() {
   return (
-    // <StreakProvider>
+    <StreakProvider>
       <Stack
         screenOptions={{
           headerShown: false,
@@ -20,6 +20,6 @@ export default function Applayout() {
         />
         <Stack.Screen name="(modal)/history/[id]" />
       </Stack>
-    // </StreakProvider>
+    </StreakProvider>
   );
 }

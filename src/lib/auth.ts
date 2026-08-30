@@ -39,6 +39,9 @@ export const auth = betterAuth({
         "almafix://",
         "almafix//*",
 
+        "aiworkouttracker://",
+        "aiworkouttracker://*",
+
         "exp://",
         "exp://*",
         "exp://**",
@@ -51,13 +54,13 @@ export const auth = betterAuth({
         before: createAuthMiddleware(async (ctx) => {
             if (ctx.path === "/sign-up/email") getOnboarding(ctx.body)
         }),
-    after: createAuthMiddleware(async (ctx) => {
-        if (ctx.path != "/sign-up/email" || !ctx.context.newSession) return
-        await db.insert(profiles).values({
-            userId: ctx.context.newSession.user.id,
-            ...getOnboarding(ctx.body),
-        })
-    }),
+        after: createAuthMiddleware(async (ctx) => {
+            if (ctx.path != "/sign-up/email" || !ctx.context.newSession) return
+            await db.insert(profiles).values({
+                userId: ctx.context.newSession.user.id,
+                ...getOnboarding(ctx.body),
+            })
+        }),
     },
     plugins: [expo()],
 })
