@@ -64,7 +64,7 @@ function CustomTabLayout() {
                 listeners={{
                     tabPress: (event) => {
                         event.preventDefault()
-                        router.push("/workouts/create")
+                        router.push("/workout/create")
                     },
                 }}
                 options={{

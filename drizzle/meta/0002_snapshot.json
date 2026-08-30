@@ -1,6 +1,6 @@
 {
-  "id": "db1a6725-7394-4cc8-a4ec-366aa08b10c6",
-  "prevId": "00000000-0000-0000-0000-000000000000",
+  "id": "b9d9c55e-b8fd-496c-8a4b-07deaee175b9",
+  "prevId": "f7e1a813-b812-4921-8840-c26033170c20",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
@@ -8,10 +8,17 @@
       "name": "profiles",
       "schema": "",
       "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
         "user_id": {
           "name": "user_id",
           "type": "text",
-          "primaryKey": true,
+          "primaryKey": false,
           "notNull": true
         },
         "gender": {
