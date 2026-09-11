@@ -4,7 +4,7 @@
     "slug": "almafix",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/outer.png",
     "scheme": "almafix",
     "userInterfaceStyle": "automatic",
     "ios": {

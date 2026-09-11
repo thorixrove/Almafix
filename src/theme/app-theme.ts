@@ -28,7 +28,7 @@ export const appThemeColors = {
   },
   dark: {
     ...brand,
-    accent: "#2563EB",
+    accent: "#1B2942",
     background: "#0B0F19",
     border: "#242C3E",
     card: "#161D2E",

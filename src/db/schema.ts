@@ -59,9 +59,6 @@ export const workouts = pgTable("workouts", {
 
 export const exercises = pgTable("exercises", {
   id: uuid().defaultRandom().primaryKey(),
-  userId: text()
-    .notNull()
-    .references(() => user.id, { onDelete: "cascade" }),
   slug: text().notNull().unique(),
   name: text().notNull(),
   image: text(),
